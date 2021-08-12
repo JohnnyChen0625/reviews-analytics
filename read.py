@@ -6,6 +6,11 @@ with open('reviews.txt', 'r') as f :
 		count += 1
 		if count % 1000 == 0: # %求餘數 1000 的倍數才會印出來
 		    print(len(data))
-print(len(data))
+print('檔案讀取完, 總共有', len(data), '比資料')
 
-print(data[0])
+sum_len = 0 #算出留言的平均長度
+for d in data: #每一筆資料稱為d data為清單
+	sum_len += len(d)
+
+print('留言的平均長度為', sum_len/len(data))
+	
